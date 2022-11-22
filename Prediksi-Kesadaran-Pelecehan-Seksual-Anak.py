@@ -72,16 +72,13 @@ st.title("Prediksi Kesadaran Pelecehan Seksual Anak")
 tab1, tab2, tab3 = st.tabs(["Deskripsi Data", "Tab Processing", "Tab Modeling dan Implementasi"])
 
 with tab1:
-   st.header("Deskripsi Data")
    st.image("DD1.png")
    st.image("DD2.png")
 
 with tab2:
-   st.header("Tab Processing")
    st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
 
 with tab3:
-   st.header("Tab Modeling dan Implementasi")
    st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
     
 st.header('Jawablah Semua Pertanyaan Berikut :')
