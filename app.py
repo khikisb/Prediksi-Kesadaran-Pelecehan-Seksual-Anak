@@ -29,7 +29,6 @@ st.sidebar.success("Pilih Halaman Yang Ingin Anda Tuju.")
 
 
 st.title('Prediksi Harga Berlian')
-st.image('')
 st.header('Jawablah Semua Pertanyaan Berikut :')
 
 q1 = st.selectbox('"Children are safe among family members such as grandparents, uncles, aunts, cousins"', ['Aggree', 'Disagree'])
