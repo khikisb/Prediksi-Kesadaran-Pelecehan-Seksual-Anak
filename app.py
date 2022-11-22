@@ -11,22 +11,22 @@ model = pickle.load(open('model_file.pkl', 'rb'))
 # Define the prediction function
 def predict(q1, q2, q3, q4, q5, q6, q7, q8):
     #Predicting
-    if q1 == 'Agree':
+    if q1 == 'Aggree':
         q1 = 1
     elif q1 == 'Disagree':
         q1 = 0
     
-    if q2 == 'Agree':
+    if q2 == 'Aggree':
         q2 = 1
     elif q2 == 'Disagree':
         q2 = 0
     
-    if q3 == 'Agree':
+    if q3 == 'Aggree':
         q3 = 1
     elif q3 == 'Disagree':
         q3 = 0
         
-    if q4 == 'Agree':
+    if q4 == 'Aggree':
         q4 = 1
     elif q4 == 'Disagree':
         q4 = 0
