@@ -11,44 +11,44 @@ model = pickle.load(open('model_file.pkl', 'rb'))
 # Define the prediction function
 def predict(q1, q2, q3, q4, q5, q6, q7, q8):
     #Predicting
-    if q1 == 'Aggree':
+    if q1 == 'Setuju':
         q1 = 1
-    elif q1 == 'Disagree':
+    elif q1 == 'Tidak Setuju':
         q1 = 0
     
-    if q2 == 'Aggree':
+    if q2 == 'Setuju':
         q2 = 1
-    elif q2 == 'Disagree':
+    elif q2 == 'Tidak Setuju':
         q2 = 0
     
-    if q3 == 'Aggree':
+    if q3 == 'Setuju':
         q3 = 1
-    elif q3 == 'Disagree':
+    elif q3 == 'Tidak Setuju':
         q3 = 0
         
-    if q4 == 'Aggree':
+    if q4 == 'Setuju':
         q4 = 1
-    elif q4 == 'Disagree':
+    elif q4 == 'Tidak Setuju':
         q4 = 0
         
-    if q5 == 'Yes':
+    if q5 == 'Iya Tahu':
         q5 = 1
-    elif q5 == 'No':
+    elif q5 == 'Tidak Tahu':
         q5 = 0    
         
-    if q6 == 'Yes':
+    if q6 == 'Iya Tahu':
         q6 = 1
-    elif q6 == 'No':
+    elif q6 == 'Tidak Tahu':
         q6 = 0
         
-    if q7 == 'Yes':
+    if q7 == 'Iya Tahu':
         q7 = 1
-    elif q7 == 'No':
+    elif q7 == 'Tidak Tahu':
         q7 = 0 
         
-    if q8 == 'Yes':
+    if q8 == 'Iya Tahu':
         q8 = 1
-    elif q8 == 'No':
+    elif q8 == 'Tidak Tahu':
         q8 = 0
         
     prediction = model.predict(pd.DataFrame([[q1,q2,q3,q4,q5,q6,q7,q8]], columns = ['"Children are safe among family members such as grandparents, uncles, aunts, cousins"',
@@ -73,15 +73,15 @@ st.sidebar.success("Pilih Halaman Yang Ingin Anda Tuju.")
 st.title("Prediksi Kesadaran Pelecehan Seksual Anak")
 st.header('Jawablah Semua Pertanyaan Berikut :')
 
-q1 = st.selectbox('"Apakah anak-anak aman di antara anggota keluarga seperti kakek nenek, paman, bibi, sepupu"', ['Aggree', 'Disagree'])
-q2 = st.selectbox('"'"Anak-anak terutama dilecehkan oleh orang asing di masyarakat kita"'"', ['Aggree', 'Disagree'])
-q3 = st.selectbox('Anak laki-laki tidak membutuhkan pengetahuan pencegahan pelecehan seksual', ['Aggree', 'Disagree'])
-q4 = st.selectbox('"Mengajarkan pencegahan pelecehan seksual di sekolah tidak perlu. Itu akan membuat anak penasaran dengan seks"', ['Aggree', 'Disagree'])
-q5 = st.selectbox('"Apakah kamu tahu apa itu perawatan anak?"', ['Yes', 'No'])
-q6 = st.selectbox('"Tahukah Anda tanda-tanda apa yang harus dicari untuk mengidentifikasi jika anak Anda telah dilecehkan?"', ['Yes', 'No'])
-q7 = st.selectbox('Apakah menurut Anda anak-anak memerlukan konseling pasca-pelecehan untuk pulih?', ['Yes', 'No'])
-q8 = st.selectbox('"Apakah menurut Anda Anda harus mengambil tindakan hukum terhadap pelaku kekerasan terhadap anak Anda?"', ['Yes', 'No'])
+q1 = st.selectbox('"Apakah anak-anak aman di antara anggota keluarga seperti kakek nenek, paman, bibi, sepupu"', ['Setuju', 'Tidak Setuju'])
+q2 = st.selectbox('"'"Anak-anak terutama dilecehkan oleh orang asing di masyarakat kita"'"', ['Setuju', 'Tidak Setuju'])
+q3 = st.selectbox('Anak laki-laki tidak membutuhkan pengetahuan pencegahan pelecehan seksual', ['Setuju', 'Tidak Setuju'])
+q4 = st.selectbox('"Mengajarkan pencegahan pelecehan seksual di sekolah tidak perlu. Itu akan membuat anak penasaran dengan seks"', ['Setuju', 'Tidak Setuju'])
+q5 = st.selectbox('"Apakah kamu tahu apa itu perawatan anak?"', ['Iya Tahu', 'Tidak Tahu'])
+q6 = st.selectbox('"Tahukah Anda tanda-tanda apa yang harus dicari untuk mengidentifikasi jika anak Anda telah dilecehkan?"', ['Iya Tahu', 'Tidak Tahu'])
+q7 = st.selectbox('Apakah menurut Anda anak-anak memerlukan konseling pasca-pelecehan untuk pulih?', ['Iya Tahu', 'Tidak Tahu'])
+q8 = st.selectbox('"Apakah menurut Anda Anda harus mengambil tindakan hukum terhadap pelaku kekerasan terhadap anak Anda?"', ['Iya Tahu', 'Tidak Tahu'])
 
 if st.button('Prediksi'):
     prediksi = predict(q1, q2, q3, q4, q5, q6, q7, q8)
-    st.success(f'Kamu Memiliki Kesadaran {prediksi}')
+    st.success(f'Tingkat Kesadaran Pelecehan Seksual Anak anda adalah {prediksi}')
