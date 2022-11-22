@@ -10,13 +10,48 @@ model = pickle.load(open('model_file.pkl', 'rb'))
 
 # Define the prediction function
 def predict(q1, q2, q3, q4, q5, q6, q7, q8):
-    #Predicting the price of the carat
+    #Predicting
     if q1 == 'Agree':
         q1 = 1
     elif q1 == 'Disagree':
         q1 = 0
     
-    prediction = model.predict(pd.DataFrame([[q1]], columns=["Children are safe among family members such as grandparents, uncles, aunts, cousins"]))
+    if q2 == 'Agree':
+        q2 = 1
+    elif q2 == 'Disagree':
+        q2 = 0
+    
+    if q3 == 'Agree':
+        q3 = 1
+    elif q3 == 'Disagree':
+        q3 = 0
+        
+    if q4 == 'Agree':
+        q4 = 1
+    elif q4 == 'Disagree':
+        q4 = 0
+        
+    if q5 == 'Yes':
+        q5 = 1
+    elif q5 == 'No':
+        q5 = 0    
+        
+    if q6 == 'Yes':
+        q6 = 1
+    elif q6 == 'No':
+        q6 = 0
+        
+    if q7 == 'Yes':
+        q7 = 1
+    elif q7 == 'No':
+        q7 = 0 
+        
+    if q8 == 'Yes':
+        q8 = 1
+    elif q8 == 'No':
+        q8 = 0
+        
+    prediction = model.predict(pd.DataFrame([[q1,q2,q3,q4,q5,q6,q7,q8]], columns=["Children are safe among family members such as grandparents, uncles, aunts, cousins", "Children are mainly abused by strangers in our society", "Male children dont need sexual abuse prevention knowledge", "Teaching sexual abuse prevention in school is not necessary. It will make children curious about sex", "Do you know what child grooming is?", "Do you know what signs to look for to identify if your child has been abused?", "Do you think children need post abuse counseling for recovering?", "Do you think you should take legal action against the abuser of your child?"]))
     return prediction
 
 st.set_page_config(
