@@ -66,6 +66,9 @@ st.set_page_config(
 st.title("")
 st.sidebar.success("Pilih Halaman Yang Ingin Anda Tuju.")
 
+
+st.title("Prediksi Kesadaran Pelecehan Seksual Anak")
+
 tab1, tab2, tab3 = st.tabs(["Cat", "Dog", "Owl"])
 
 with tab1:
@@ -79,9 +82,7 @@ with tab2:
 with tab3:
    st.header("An owl")
    st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
-
-
-st.title("Prediksi Kesadaran Pelecehan Seksual Anak")
+    
 st.header('Jawablah Semua Pertanyaan Berikut :')
 
 q1 = st.selectbox('Apakah anak-anak aman di antara anggota keluarga seperti kakek nenek, paman, bibi, sepupu', ['Setuju', 'Tidak Setuju'])
