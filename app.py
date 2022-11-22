@@ -7,10 +7,6 @@ import matplotlib.pyplot as plt
 # load the model from disk
 model = pickle.load(open('model_file.pkl', 'rb'))
 
-#Caching the model for faster loading
-@st.cache
-
-
 # Define the prediction function
 def predict(q1):
     #Predicting the price of the carat
