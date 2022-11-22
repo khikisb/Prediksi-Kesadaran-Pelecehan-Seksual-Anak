@@ -69,7 +69,7 @@ st.sidebar.success("Pilih Halaman Yang Ingin Anda Tuju.")
 
 st.title("Prediksi Kesadaran Pelecehan Seksual Anak")
 
-tab1, tab2, tab3 = st.tabs(["Deskripsi Data", "Tab Processing", "Tab Modeling dan Implementasi"])
+tab1, tab2, tab3, tab4 = st.tabs(["Deskripsi Data", "Tab Processing", "Tab Modeling", "Tab Implementasi"])
 
 with tab1:
    st.image("DD1.png")
@@ -79,6 +79,9 @@ with tab2:
    st.image("TP1.png")
    st.image("TP2.png")
 with tab3:
+   st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
+
+with tab4:
    st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
     
 st.header('Jawablah Semua Pertanyaan Berikut :')
