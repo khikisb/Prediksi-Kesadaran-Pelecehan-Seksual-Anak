@@ -79,7 +79,8 @@ with tab2:
    st.image("TP1.png")
    st.image("TP2.png")
 with tab3:
-   st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
+   st.image("TM1.png")
+   st.image("TM2.png")
 
 with tab4:
    st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
