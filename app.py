@@ -33,6 +33,6 @@ st.header('Jawablah Semua Pertanyaan Berikut :')
 
 q1 = st.selectbox('"Children are safe among family members such as grandparents, uncles, aunts, cousins"', ['Aggree', 'Disagree'])
 
-if st.button('Prediksi Harga Belian'):
+if st.button('Prediksi'):
     price = predict(q1)
-    st.success(f'Harga Berlian Tersebut adalah {price} USD')
+    st.success(f'Kamu Memiliki Kesadaran {price}')
