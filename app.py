@@ -41,14 +41,14 @@ def predict(q1, q2, q3, q4, q5, q6, q7, q8):
     elif q6 == 'Tidak Tahu':
         q6 = 0
         
-    if q7 == 'Iya Tahu':
+    if q7 == 'Iya Perlu':
         q7 = 1
-    elif q7 == 'Tidak Tahu':
+    elif q7 == 'Tidak Perlu':
         q7 = 0 
         
-    if q8 == 'Iya Tahu':
+    if q8 == 'Iya Tentu':
         q8 = 1
-    elif q8 == 'Tidak Tahu':
+    elif q8 == 'Tidak':
         q8 = 0
         
     prediction = model.predict(pd.DataFrame([[q1,q2,q3,q4,q5,q6,q7,q8]], columns = ['"Children are safe among family members such as grandparents, uncles, aunts, cousins"',
@@ -73,15 +73,15 @@ st.sidebar.success("Pilih Halaman Yang Ingin Anda Tuju.")
 st.title("Prediksi Kesadaran Pelecehan Seksual Anak")
 st.header('Jawablah Semua Pertanyaan Berikut :')
 
-q1 = st.selectbox('"Apakah anak-anak aman di antara anggota keluarga seperti kakek nenek, paman, bibi, sepupu"', ['Setuju', 'Tidak Setuju'])
-q2 = st.selectbox('"'"Anak-anak terutama dilecehkan oleh orang asing di masyarakat kita"'"', ['Setuju', 'Tidak Setuju'])
+q1 = st.selectbox('Apakah anak-anak aman di antara anggota keluarga seperti kakek nenek, paman, bibi, sepupu', ['Setuju', 'Tidak Setuju'])
+q2 = st.selectbox('Anak-anak paling sering dilecehkan oleh orang asing di masyarakat kita', ['Setuju', 'Tidak Setuju'])
 q3 = st.selectbox('Anak laki-laki tidak membutuhkan pengetahuan pencegahan pelecehan seksual', ['Setuju', 'Tidak Setuju'])
-q4 = st.selectbox('"Mengajarkan pencegahan pelecehan seksual di sekolah tidak perlu. Itu akan membuat anak penasaran dengan seks"', ['Setuju', 'Tidak Setuju'])
-q5 = st.selectbox('"Apakah kamu tahu apa itu perawatan anak?"', ['Iya Tahu', 'Tidak Tahu'])
-q6 = st.selectbox('"Tahukah Anda tanda-tanda apa yang harus dicari untuk mengidentifikasi jika anak Anda telah dilecehkan?"', ['Iya Tahu', 'Tidak Tahu'])
-q7 = st.selectbox('Apakah menurut Anda anak-anak memerlukan konseling pasca-pelecehan untuk pulih?', ['Iya Tahu', 'Tidak Tahu'])
-q8 = st.selectbox('"Apakah menurut Anda Anda harus mengambil tindakan hukum terhadap pelaku kekerasan terhadap anak Anda?"', ['Iya Tahu', 'Tidak Tahu'])
+q4 = st.selectbox('"Mengajarkan pencegahan pelecehan seksual di sekolah tidak perlu. Itu akan membuat anak penasaran dengan seks', ['Setuju', 'Tidak Setuju'])
+q5 = st.selectbox('Apakah anda tahu apa itu perawatan anak?', ['Iya Tahu', 'Tidak Tahu'])
+q6 = st.selectbox('Tahukah anda tanda-tanda apa yang harus dicari untuk mengidentifikasi jika anak Anda telah dilecehkan"', ['Iya Tahu', 'Tidak Tahu'])
+q7 = st.selectbox('Apakah menurut Anda, anak-anak memerlukan konseling pasca-pelecehan untuk pulih?', ['Iya Perlu', 'Tidak Perlu'])
+q8 = st.selectbox('Apakah menurut Anda, Anda harus mengambil tindakan hukum terhadap pelaku kekerasan terhadap anak Anda?', ['Iya Tentu', 'Tidak'])
 
 if st.button('Prediksi'):
     prediksi = predict(q1, q2, q3, q4, q5, q6, q7, q8)
-    st.success(f'Tingkat Kesadaran Pelecehan Seksual Anak anda adalah {prediksi}')
+    st.success(f'Tingkat Kesadaran Pelecehan Seksual Terhadap Anak, yaitu {prediksi}')
