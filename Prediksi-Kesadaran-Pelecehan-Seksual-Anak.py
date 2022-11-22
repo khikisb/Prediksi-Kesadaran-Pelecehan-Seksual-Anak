@@ -83,7 +83,8 @@ with tab3:
    st.image("TM2.png")
 
 with tab4:
-   st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
+   st.image("TI1.png")
+   st.image("TI2.png")
     
 st.header('Jawablah Semua Pertanyaan Berikut :')
 
