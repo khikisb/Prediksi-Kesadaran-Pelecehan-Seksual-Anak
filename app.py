@@ -15,7 +15,7 @@ def predict(q1):
     #Predicting the price of the carat
     if q1 == 'Agree':
         q1 = 1
-    elif cut == 'Disagree':
+    elif q1 == 'Disagree':
         q1 = 0
     
     prediction = model.predict(pd.DataFrame([[q1]], columns=["Children are safe among family members such as grandparents, uncles, aunts, cousins"]))
