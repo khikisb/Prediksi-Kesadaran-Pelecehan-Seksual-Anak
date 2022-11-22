@@ -51,7 +51,15 @@ def predict(q1, q2, q3, q4, q5, q6, q7, q8):
     elif q8 == 'No':
         q8 = 0
         
-    prediction = model.predict(pd.DataFrame([[q1,q2,q3,q4,q5,q6,q7,q8]], columns=["Children are safe among family members such as grandparents, uncles, aunts, cousins", "Children are mainly abused by strangers in our society", "Male children dont need sexual abuse prevention knowledge", "Teaching sexual abuse prevention in school is not necessary. It will make children curious about sex", "Do you know what child grooming is?", "Do you know what signs to look for to identify if your child has been abused?", "Do you think children need post abuse counseling for recovering?", "Do you think you should take legal action against the abuser of your child?"]))
+    prediction = model.predict(pd.DataFrame([[q1,q2,q3,q4,q5,q6,q7,q8]], columns = ['"Children are safe among family members such as grandparents, uncles, aunts, cousins"',
+       '"Children are mainly abused by strangers in our society"',
+       'Male children dont need sexual abuse prevention knowledge',
+       '"Teaching sexual abuse prevention in school is not necessary. It will make children curious about sex"',
+       'Do you know what child grooming is?',
+       'Do you know what signs to look for to identify if your child has been abused?',
+       'Do you think children need post abuse counseling for recovering?',
+       'Do you think you should take legal action against the abuser of your child?',
+       'Knowledge Level']))
     return prediction
 
 st.set_page_config(
