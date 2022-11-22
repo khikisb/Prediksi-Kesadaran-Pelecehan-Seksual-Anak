@@ -58,8 +58,7 @@ def predict(q1, q2, q3, q4, q5, q6, q7, q8):
        'Do you know what child grooming is?',
        'Do you know what signs to look for to identify if your child has been abused?',
        'Do you think children need post abuse counseling for recovering?',
-       'Do you think you should take legal action against the abuser of your child?',
-       'Knowledge Level']))
+       'Do you think you should take legal action against the abuser of your child?']))
     return prediction
 
 st.set_page_config(
