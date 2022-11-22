@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 model = pickle.load(open('model_file.pkl', 'rb'))
 
 # Define the prediction function
-def predict(q1):
+def predict(q1, q2, q3, q4, q5, q6, q7, q8):
     #Predicting the price of the carat
     if q1 == 'Agree':
         q1 = 1
@@ -31,8 +31,15 @@ st.sidebar.success("Pilih Halaman Yang Ingin Anda Tuju.")
 st.title('Prediksi Harga Berlian')
 st.header('Jawablah Semua Pertanyaan Berikut :')
 
-q1 = st.selectbox('"Children are safe among family members such as grandparents, uncles, aunts, cousins"', ['Aggree', 'Disagree'])
+q1 = st.selectbox('"Apakah anak-anak aman di antara anggota keluarga seperti kakek nenek, paman, bibi, sepupu"', ['Aggree', 'Disagree'])
+q2 = st.selectbox('"Apakah anak-anak aman di antara anggota keluarga seperti kakek nenek, paman, bibi, sepupu"', ['Aggree', 'Disagree'])
+q3 = st.selectbox('"Apakah anak-anak aman di antara anggota keluarga seperti kakek nenek, paman, bibi, sepupu"', ['Aggree', 'Disagree'])
+q4 = st.selectbox('"Apakah anak-anak aman di antara anggota keluarga seperti kakek nenek, paman, bibi, sepupu"', ['Aggree', 'Disagree'])
+q5 = st.selectbox('"Apakah anak-anak aman di antara anggota keluarga seperti kakek nenek, paman, bibi, sepupu"', ['Aggree', 'Disagree'])
+q6 = st.selectbox('"Apakah anak-anak aman di antara anggota keluarga seperti kakek nenek, paman, bibi, sepupu"', ['Aggree', 'Disagree'])
+q7 = st.selectbox('"Apakah anak-anak aman di antara anggota keluarga seperti kakek nenek, paman, bibi, sepupu"', ['Aggree', 'Disagree'])
+q8 = st.selectbox('"Apakah anak-anak aman di antara anggota keluarga seperti kakek nenek, paman, bibi, sepupu"', ['Aggree', 'Disagree'])
 
 if st.button('Prediksi'):
-    price = predict(q1)
-    st.success(f'Kamu Memiliki Kesadaran {price}')
+    prediksi = predict(q1, q2, q3, q4, q5, q6, q7, q8)
+    st.success(f'Kamu Memiliki Kesadaran {prediksi}')
