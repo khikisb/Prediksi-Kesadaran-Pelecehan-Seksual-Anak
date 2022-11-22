@@ -20,7 +20,7 @@ def predict(q1, q2, q3, q4, q5, q6, q7, q8):
     return prediction
 
 st.set_page_config(
-    page_title="Prediksi Harga Berlian",
+    page_title="Prediksi Kesadaran Pelecehan Seksual Anak",
     page_icon="👋",
 )
 
@@ -28,17 +28,17 @@ st.title("")
 st.sidebar.success("Pilih Halaman Yang Ingin Anda Tuju.")
 
 
-st.title('Prediksi Harga Berlian')
+st.title("Prediksi Kesadaran Pelecehan Seksual Anak")
 st.header('Jawablah Semua Pertanyaan Berikut :')
 
 q1 = st.selectbox('"Apakah anak-anak aman di antara anggota keluarga seperti kakek nenek, paman, bibi, sepupu"', ['Aggree', 'Disagree'])
-q2 = st.selectbox('"Apakah anak-anak aman di antara anggota keluarga seperti kakek nenek, paman, bibi, sepupu"', ['Aggree', 'Disagree'])
-q3 = st.selectbox('"Apakah anak-anak aman di antara anggota keluarga seperti kakek nenek, paman, bibi, sepupu"', ['Aggree', 'Disagree'])
-q4 = st.selectbox('"Apakah anak-anak aman di antara anggota keluarga seperti kakek nenek, paman, bibi, sepupu"', ['Aggree', 'Disagree'])
-q5 = st.selectbox('"Apakah anak-anak aman di antara anggota keluarga seperti kakek nenek, paman, bibi, sepupu"', ['Aggree', 'Disagree'])
-q6 = st.selectbox('"Apakah anak-anak aman di antara anggota keluarga seperti kakek nenek, paman, bibi, sepupu"', ['Aggree', 'Disagree'])
-q7 = st.selectbox('"Apakah anak-anak aman di antara anggota keluarga seperti kakek nenek, paman, bibi, sepupu"', ['Aggree', 'Disagree'])
-q8 = st.selectbox('"Apakah anak-anak aman di antara anggota keluarga seperti kakek nenek, paman, bibi, sepupu"', ['Aggree', 'Disagree'])
+q2 = st.selectbox('"'"Anak-anak terutama dilecehkan oleh orang asing di masyarakat kita"'"', ['Aggree', 'Disagree'])
+q3 = st.selectbox('Anak laki-laki tidak membutuhkan pengetahuan pencegahan pelecehan seksual', ['Aggree', 'Disagree'])
+q4 = st.selectbox('"Mengajarkan pencegahan pelecehan seksual di sekolah tidak perlu. Itu akan membuat anak penasaran dengan seks"', ['Aggree', 'Disagree'])
+q5 = st.selectbox('"Apakah kamu tahu apa itu perawatan anak?"', ['Yes', 'No'])
+q6 = st.selectbox('"Tahukah Anda tanda-tanda apa yang harus dicari untuk mengidentifikasi jika anak Anda telah dilecehkan?"', ['Yes', 'No'])
+q7 = st.selectbox('Apakah menurut Anda anak-anak memerlukan konseling pasca-pelecehan untuk pulih?', ['Yes', 'No'])
+q8 = st.selectbox('"Apakah menurut Anda Anda harus mengambil tindakan hukum terhadap pelaku kekerasan terhadap anak Anda?"', ['Yes', 'No'])
 
 if st.button('Prediksi'):
     prediksi = predict(q1, q2, q3, q4, q5, q6, q7, q8)
