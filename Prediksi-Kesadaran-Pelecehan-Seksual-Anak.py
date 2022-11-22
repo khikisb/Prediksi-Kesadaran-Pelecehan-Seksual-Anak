@@ -73,7 +73,8 @@ tab1, tab2, tab3 = st.tabs(["Deskripsi Data", "Tab Processing", "Tab Modeling da
 
 with tab1:
    st.header("Deskripsi Data")
-   st.image("https://static.streamlit.io/examples/cat.jpg", width=200)
+   st.image("DD1.png")
+   st.image("DD2.png")
 
 with tab2:
    st.header("Tab Processing")
