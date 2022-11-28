@@ -69,14 +69,14 @@ st.sidebar.success("Pilih Halaman Yang Ingin Anda Tuju.")
 
 st.title("Prediksi Kesadaran Pelecehan Seksual Anak")
 
-tab1, tab2, tab3, tab4 = st.tabs(["Deskripsi Data", "Tab Processing", "Tab Modeling", "Tab Implementasi"])
+tab1, tab2, tab3, tab4 = st.tabs(["Deskripsi Data", "Tab Pre - Processing", "Tab Modeling", "Tab Implementasi"])
 
 with tab1:
    st.image("TabDD1.png")
 
 with tab2:
-   st.image("TP1.png")
-   st.image("TP2.png")
+   st.image("TabPP1.png")
+    
 with tab3:
    st.image("TM1.png")
    st.image("TM2.png")
