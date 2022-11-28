@@ -72,7 +72,7 @@ st.title("Prediksi Kesadaran Pelecehan Seksual Anak")
 tab1, tab2, tab3, tab4 = st.tabs(["Deskripsi Data", "Tab Processing", "Tab Modeling", "Tab Implementasi"])
 
 with tab1:
-   st.image("TabDD1.png)
+   st.image("TabDD1.png")
 
 with tab2:
    st.image("TP1.png")
