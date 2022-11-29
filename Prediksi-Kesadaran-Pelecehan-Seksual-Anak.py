@@ -59,7 +59,7 @@ def predict(q1, q2, q3, q4, q5, q6, q7, q8):
     return prediction
 
 st.set_page_config(
-    page_title="Prediksi Kesadaran Pelecehan Seksual Anak",
+    page_title="Prediksi Tingkat Kesadaran Pelecehan Seksual pada Anak",
     page_icon="👋",
 )
 
