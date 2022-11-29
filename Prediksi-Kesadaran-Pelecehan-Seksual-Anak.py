@@ -78,7 +78,7 @@ with tab2:
    st.image("TabPP1.png")
     
 with tab3:
-   st.image("TabModel1.png")
+   st.image("modelrevisi.png")
 
 with tab4:
    st.image("TI1.png")
