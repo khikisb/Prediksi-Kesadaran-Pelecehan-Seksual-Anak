@@ -67,7 +67,7 @@ st.title("")
 st.sidebar.success("Pilih Halaman Yang Ingin Anda Tuju.")
 
 
-st.title("Prediksi Kesadaran Pelecehan Seksual Anak")
+st.title("Prediksi Tingkat Kesadaran Pelecehan Seksual pada Anak")
 
 tab1, tab2, tab3, tab4 = st.tabs(["Deskripsi Data", "Tab Pre - Processing", "Tab Modeling", "Tab Implementasi"])
 
